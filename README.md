@@ -1,0 +1,2 @@
+# VisualClipper
+VisualClipper software
