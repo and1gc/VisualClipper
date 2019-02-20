@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/VisualClipper">
+        <file>gaochong.ico</file>
+        <file>forward.png</file>
+        <file>reverse.png</file>
+        <file>VisualClipper.ico</file>
+    </qresource>
+</RCC>

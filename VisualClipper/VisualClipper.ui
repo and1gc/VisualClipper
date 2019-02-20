@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VisualClipperClass</class>
+ <widget class="QMainWindow" name="VisualClipperClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>899</width>
+    <height>755</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VisualClipper</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="VisualClipper.qrc">
+    <normaloff>:/VisualClipper/VisualClipper.ico</normaloff>:/VisualClipper/VisualClipper.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>40</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>init_network</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="m_console">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>871</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>310</y>
+      <width>271</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Jog Motion</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="VisualClipper.qrc">
+       <normaloff>:/VisualClipper/forward.png</normaloff>:/VisualClipper/forward.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="VisualClipper.qrc">
+       <normaloff>:/VisualClipper/reverse.png</normaloff>:/VisualClipper/reverse.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>kill</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enable</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>431</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="background">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>899</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_File"/>
+    <addaction name="actionOpen_File_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Configure</string>
+    </property>
+    <addaction name="actionI"/>
+    <addaction name="actionP_Variables"/>
+    <addaction name="actionQ_Variables"/>
+    <addaction name="actionM_Variables"/>
+    <addaction name="separator"/>
+    <addaction name="actionCoord_System"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionTernimal"/>
+    <addaction name="actionWatch_Window"/>
+    <addaction name="actionPosition"/>
+    <addaction name="actionJog_Ribbon"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Setup</string>
+    </property>
+    <addaction name="actionGenaral_Setup_and_Options"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionPMAC_plot_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>Windows</string>
+    </property>
+    <addaction name="actionPMAC_plot"/>
+    <addaction name="actionClose_All"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionBug_Repoeting"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuBackup">
+    <property name="title">
+     <string>Backup</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuParamter_Identification">
+    <property name="title">
+     <string>Paramter Identification</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_6"/>
+   <addaction name="menuBackup"/>
+   <addaction name="menuParamter_Identification"/>
+   <addaction name="menu_7"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_File">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionOpen_File_2">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionI">
+   <property name="text">
+    <string>I-Variables </string>
+   </property>
+  </action>
+  <action name="actionP_Variables">
+   <property name="text">
+    <string>P-Variables</string>
+   </property>
+  </action>
+  <action name="actionQ_Variables">
+   <property name="text">
+    <string>Q-Variables</string>
+   </property>
+  </action>
+  <action name="actionM_Variables">
+   <property name="text">
+    <string>M-Variables</string>
+   </property>
+  </action>
+  <action name="actionCoord_System">
+   <property name="text">
+    <string>Coordinate System</string>
+   </property>
+  </action>
+  <action name="actionTernimal">
+   <property name="text">
+    <string>Ternimal</string>
+   </property>
+  </action>
+  <action name="actionWatch_Window">
+   <property name="text">
+    <string>Watch Window</string>
+   </property>
+  </action>
+  <action name="actionPosition">
+   <property name="text">
+    <string>Position</string>
+   </property>
+  </action>
+  <action name="actionJog_Ribbon">
+   <property name="text">
+    <string>Jog Ribbon</string>
+   </property>
+  </action>
+  <action name="actionGenaral_Setup_and_Options">
+   <property name="text">
+    <string>Genaral Setup and Options</string>
+   </property>
+  </action>
+  <action name="actionBug_Repoeting">
+   <property name="text">
+    <string>Bug Reporting</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionPMAC_plot">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionPMAC_plot_2">
+   <property name="text">
+    <string>PMAC plot</string>
+   </property>
+  </action>
+  <action name="actionClose_All">
+   <property name="text">
+    <string>Close All</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="VisualClipper.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>init_network()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>670</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>jog_forward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>348</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>jog_reverse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>jog_kill()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>enabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>640</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>382</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen_File</sender>
+   <signal>triggered()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>VCFilesnew()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen_File_2</sender>
+   <signal>triggered()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>VCFilesopen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>VisualClipperClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>377</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>jog_forward()</slot>
+  <slot>jog_reverse()</slot>
+  <slot>jog_kill()</slot>
+  <slot>jog_stop()</slot>
+  <slot>enabled(bool)</slot>
+  <slot>init_network()</slot>
+  <slot>VCFilesopen()</slot>
+  <slot>VCFilesnew()</slot>
+ </slots>
+</ui>
